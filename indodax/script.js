@@ -10,7 +10,7 @@ async function main(){
         crypto_data = await getLogo(crypto_data);
         // crypto_table = crypto_data.map(item => item);
         // console.log(crypto_table);
-    }, 10000);
+    }, 60000);
     setInterval(() => {
         
         let crypto_table = cloneData(crypto_data);
