@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
+    <title>AdCrypto Counter</title>
+</head>
+<body>
+    <div class="container-fluid">
+        <button class="btn btn-primary refresh">Refresh</button>
+        <button class="btn btn-primary total">Total</button>
+        <div class="row">
+            <div class="col-6">
+                <form class="converter">
+                    
+                    <div class="row">
+                        <div class="form-group col-md-6">
+                            <label>[Bitcoin] adbtc.top</label>
+                            <input id="adbtc" type="text" class="form-control mt-1">
+                        </div>
+                        <div class="form-group col-md-6">
+                            <label>Rupiah</label>
+                            <div class="input-group mt-1">
+                                <div class="input-group-prepend">
+                                    <div class="input-group-text">Rp</div>
+                                </div>
+                                <input id="adbtc-idr" type="text" class="form-control" readonly>
+                            </div>
+                        </div>
+                    </div>
+
+                    
+                </form>
+            </div>
+            <div class="col-6">
+                <div class="form-group">
+                    <label for="">TOTAL</label>
+                    <div class="input-group mt-1">
+                        <div class="input-group-prepend">
+                            <div class="input-group-text">Rp</div>
+                        </div>
+                        <input type="text" class="form-control total">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Script -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
