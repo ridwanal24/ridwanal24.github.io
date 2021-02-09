@@ -1,4 +1,17 @@
 let data_convert;
+let data_site = [
+    "adbtc.top",
+    "surf-trx.com",
+    "adltc.cc",
+    "addash.cc",
+    "adsdgb.com",
+    "adeth.cc",
+    "addoge.cc",
+    "adzec.cc",
+    "adxrp.cc",
+    "surfingbtc.cc",
+    "adbch.cc",
+];
 
 // INDEX
 async function main(){
@@ -193,6 +206,15 @@ function countAll(){
     document.querySelector('input.total').value = rupiah.reduce((a,b) => a+b);
 }
 
+function openSite(){
+    data_site.forEach(item => {
+        let a = document.createElement('a');
+        a.setAttribute('href', 'http://' + item);
+        a.setAttribute('target', '_blank');
+        a.click();
+    });
+}
+
 main();
 
 document.querySelector('button.refresh').addEventListener('click', () => {
@@ -201,4 +223,8 @@ document.querySelector('button.refresh').addEventListener('click', () => {
 
 document.querySelector('button.total').addEventListener('click', () => {
     countAll();
+});
+
+document.querySelector('button.open').addEventListener('click', () => {
+    openSite();
 });
