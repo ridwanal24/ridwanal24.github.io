@@ -113,7 +113,7 @@ function showTable(d){
         txt += `<tr>
             <td>${item.key.toUpperCase()}</td>
             <td><img src="${item.logo}" style="width: 20px;"> ${item.name}</td>
-            <td>${item.price}</td>
+            <td>Rp ${item.price}</td>
             </tr>`;
     });
     txt += '</tbody></table>';
