@@ -149,6 +149,29 @@ function cloneData(data){
 
 // CONVERTER
 function converter(){
+    // "adbtc.top",
+    // "surf-trx.com",
+    // "adltc.cc",
+    // "addash.cc",
+    // "adsdgb.com",
+    // "adeth.cc",
+    // "addoge.cc",
+    // "adzec.cc",
+    // "adxrp.cc",
+    // "surfingbtc.cc",
+    // "adbch.cc",
+    let database = {
+        btc: 'surfingbtc',
+        bchabc: 'adbch',
+        drk: 'addash',
+        dgb: 'adsdgb',
+        doge: 'addoge',
+        eth: 'adeth',
+        ltc: 'adltc',
+        trx: 'surf-trx',
+        xrp: 'adxrp',
+        zec: 'adzec'
+    };
     let text = `<div class="row">
                     <div class="form-group col-md-6">
                         <label>Bitcoin0</label>
@@ -160,7 +183,7 @@ function converter(){
                             <div class="input-group-prepend">
                                 <div class="input-group-text">Rp</div>
                             </div>
-                            <input id="btc0idr" type="text" class="form-control" readonly>
+                            <input id="btc0idr" type="text" class="form-control adbtc" readonly>
                         </div>
                     </div>
                 </div>`;
@@ -176,10 +199,11 @@ function converter(){
                             <div class="input-group-prepend">
                                 <div class="input-group-text">Rp</div>
                             </div>
-                            <input id="${item.key}idr" type="text" class="form-control" readonly>
+                            <input id="${item.key}idr" type="text" class="form-control ${database[item.key]}" readonly>
                         </div>
                     </div>
                 </div>`;
+                console.log(item.key);
     });
     $('form.converter').html(text);
 }
@@ -220,7 +244,12 @@ function fillForm(){
         url: 'http://localhost/adcrypto/index.php',
         success: function(data) {
             data = JSON.parse(data);
-            console.log(data);
+            let rupiah = 0;
+            data.forEach(item => {
+                document.querySelector(`.${item.nama}`).value = item.rupiah;
+                rupiah += parseInt(item.rupiah);
+            });
+            document.querySelector('input.total').value = rupiah;
         }
     });
 }
@@ -239,6 +268,6 @@ document.querySelector('button.open').addEventListener('click', () => {
     openSite();
 });
 
-document.querySelector('button.fill').addEventListener('click',()=>{
+document.querySelector('button.from-database').addEventListener('click',()=>{
     fillForm();
 });
