@@ -241,7 +241,7 @@ function openSite(){
 
 function fillForm(){
     $.ajax({
-        url: 'http://localhost/adcrypto/index.php',
+        url: 'https://data-ridwanal24.000webhostapp.com/',
         success: function(data) {
             data = JSON.parse(data);
             let rupiah = 0;
