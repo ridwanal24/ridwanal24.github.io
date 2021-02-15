@@ -215,6 +215,16 @@ function openSite(){
     });
 }
 
+function fillForm(){
+    $.ajax({
+        url: 'http://localhost/adcrypto/index.php',
+        success: function(data) {
+            data = JSON.parse(data);
+            console.log(data);
+        }
+    });
+}
+
 main();
 
 document.querySelector('button.refresh').addEventListener('click', () => {
@@ -227,4 +237,8 @@ document.querySelector('button.total').addEventListener('click', () => {
 
 document.querySelector('button.open').addEventListener('click', () => {
     openSite();
+});
+
+document.querySelector('button.fill').addEventListener('click',()=>{
+    fillForm();
 });
