@@ -172,7 +172,7 @@ function converter(){
         xrp: 'adxrp',
         zec: 'adzec'
     };
-    let text = `<div class="row">
+    let text = `<hr><div class="row">
                     <div class="form-group col-md-6">
                         <label>Bitcoin0</label>
                         <input id="btc0" type="text" class="form-control mt-1">
@@ -186,9 +186,9 @@ function converter(){
                             <input id="btc0idr" type="text" class="form-control adbtc" readonly>
                         </div>
                     </div>
-                </div>`;
+                </div><hr>`;
     data_convert.forEach(item => {
-        text += `<div class="row">
+        text += `<hr><div class="row">
                     <div class="form-group col-md-6">
                         <label>${item.name}</label>
                         <input id="${item.key}" type="text" class="form-control mt-1">
@@ -202,7 +202,7 @@ function converter(){
                             <input id="${item.key}idr" type="text" class="form-control ${database[item.key]}" readonly>
                         </div>
                     </div>
-                </div>`;
+                </div><hr>`;
                 console.log(item.key);
     });
     $('form.converter').html(text);
