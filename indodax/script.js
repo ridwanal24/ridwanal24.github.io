@@ -175,7 +175,7 @@ function converter(){
     let text = `<hr><div class="row">
                     <div class="form-group col-md-6">
                         <label>Bitcoin0</label>
-                        <input id="btc0" type="text" class="form-control mt-1">
+                        <input id="btc0" type="text" class="form-control mt-1 adbtc">
                     </div>
                     <div class="form-group col-md-6">
                         <label>Rupiah</label>
@@ -183,7 +183,7 @@ function converter(){
                             <div class="input-group-prepend">
                                 <div class="input-group-text">Rp</div>
                             </div>
-                            <input id="btc0idr" type="text" class="form-control adbtc" readonly>
+                            <input id="btc0idr" type="text" class="form-control adbtc-rupiah" readonly>
                         </div>
                     </div>
                 </div><hr>`;
@@ -191,7 +191,7 @@ function converter(){
         text += `<hr><div class="row">
                     <div class="form-group col-md-6">
                         <label>${item.name}</label>
-                        <input id="${item.key}" type="text" class="form-control mt-1">
+                        <input id="${item.key}" type="text" class="form-control mt-1 ${database[item.key]}">
                     </div>
                     <div class="form-group col-md-6">
                         <label>Rupiah</label>
@@ -199,7 +199,7 @@ function converter(){
                             <div class="input-group-prepend">
                                 <div class="input-group-text">Rp</div>
                             </div>
-                            <input id="${item.key}idr" type="text" class="form-control ${database[item.key]}" readonly>
+                            <input id="${item.key}idr" type="text" class="form-control ${database[item.key]}-rupiah" readonly>
                         </div>
                     </div>
                 </div><hr>`;
@@ -244,9 +244,11 @@ function fillForm(){
         url: 'https://data-ridwanal24.000webhostapp.com/',
         success: function(data) {
             data = JSON.parse(data);
+            console.log(data);
             let rupiah = 0;
             data.forEach(item => {
-                document.querySelector(`.${item.nama}`).value = item.rupiah;
+                document.querySelector(`.${item.nama}-rupiah`).value = item.rupiah;
+                document.querySelector(`.${item.nama}`).value = item.coin;
                 rupiah += parseInt(item.rupiah);
             });
             document.querySelector('input.total').value = rupiah;
