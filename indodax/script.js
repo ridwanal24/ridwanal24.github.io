@@ -281,6 +281,7 @@ function fillTableConverter(){
             });
 
             $('tbody.table-body').html(text);
+            $('table.withdraw').DataTable();
         }
     });
 }
