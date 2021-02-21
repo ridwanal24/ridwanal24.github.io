@@ -204,7 +204,7 @@ function converter(){
                         </div>
                     </div>
                 </div><hr>`;
-                console.log(item.key);
+                // console.log(item.key);
     });
     $('form.converter').html(text);
 }
@@ -245,7 +245,7 @@ function fillForm(){
         url: 'https://data-ridwanal24.000webhostapp.com/',
         success: function(data) {
             data = JSON.parse(data);
-            console.log(data);
+            // console.log(data);
             let rupiah = 0;
             data.forEach(item => {
                 document.querySelector(`.${item.nama}-rupiah`).value = item.rupiah;
@@ -253,6 +253,34 @@ function fillForm(){
                 rupiah += parseInt(item.rupiah);
             });
             document.querySelector('input.total').value = rupiah;
+        }
+    });
+}
+
+function fillTableConverter(){
+    $.ajax({
+        url: 'https://data-ridwanal24.000webhostapp.com/',
+        success: function(data){
+            data = JSON.parse(data);
+            // console.log(data[5].wallet);
+            text = '';
+            data.forEach(function(item){
+                let withdraw;
+                if(item.faucetpay != null){
+                    withdraw = parseFloat(item.coin) >= parseFloat(item.faucetpay)? 'Ya':'Tidak';
+                } else if (item.wallet != null){
+                    withdraw = parseFloat(item.coin) >= parseFloat(item.wallet)? 'Ya':'Tidak';
+                }
+                
+                text += `<tr ${withdraw == 'Ya'? 'class="bg-success"':'class="bg-danger"'}>
+                            <td><b>${item.nama}</b></td>
+                            <td class="text-center">${item.wallet == null? 'Tidak Ada':item.wallet}</td>
+                            <td class="text-center">${item.faucetpay == null? 'Tidak Ada':item.faucetpay}</td>
+                            <td class="text-center">${withdraw}</td>
+                        </tr>`
+            });
+
+            $('tbody.table-body').html(text);
         }
     });
 }
@@ -273,6 +301,7 @@ document.querySelector('button.open').addEventListener('click', () => {
 
 document.querySelector('button.from-database').addEventListener('click',()=>{
     fillForm();
+    fillTableConverter();
 });
 
 
