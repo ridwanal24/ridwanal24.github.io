@@ -79,7 +79,7 @@ async function main(){
         // console.log(data_convert);
         showTable(crypto_table);
 
-    }, 1000);
+    }, 10000);
 }
 
 
@@ -116,7 +116,7 @@ function showTable(d){
     // $('.container').html('Loading Cuk');
     // console.log(d.length);
     // console.log(d);
-    let txt = `<table class="table table-striped">
+    let txt = `<table class="table table-striped crypto-price">
     <thead>
         <th>Kode</th>
         <th>Nama</th>
@@ -132,6 +132,7 @@ function showTable(d){
     txt += '</tbody></table>';
     // console.log(txt);
     $('.container .row .left').html(txt);
+    // $('.crypto-price').DataTable();
 }
 
 function cloneData(data){
@@ -205,7 +206,7 @@ function converter(){
                 </div><hr>`;
                 console.log(item.key);
     });
-    $('form.converter').html(text);
+    // $('form.converter').html(text);
 }
 
 function countAll(){
@@ -273,3 +274,5 @@ document.querySelector('button.open').addEventListener('click', () => {
 document.querySelector('button.from-database').addEventListener('click',()=>{
     fillForm();
 });
+
+
