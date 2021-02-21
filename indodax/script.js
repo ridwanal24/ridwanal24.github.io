@@ -206,7 +206,7 @@ function converter(){
                 </div><hr>`;
                 console.log(item.key);
     });
-    // $('form.converter').html(text);
+    $('form.converter').html(text);
 }
 
 function countAll(){
