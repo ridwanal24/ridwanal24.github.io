@@ -267,9 +267,9 @@ function fillTableConverter(){
             data.forEach(function(item){
                 let withdraw;
                 if(item.faucetpay != null){
-                    withdraw = parseFloat(item.coin) >= parseFloat(item.faucetpay)? 'Ya':'Tidak';
+                    withdraw = parseFloat(item.coin) >= parseFloat(item.faucetpay)? 'Bisa':'Belum Bisa';
                 } else if (item.wallet != null){
-                    withdraw = parseFloat(item.coin) >= parseFloat(item.wallet)? 'Ya':'Tidak';
+                    withdraw = parseFloat(item.coin) >= parseFloat(item.wallet)? 'Bisa':'Belum Bisa';
                 }
                 
                 text += `<tr ${withdraw == 'Ya'? 'class="bg-success"':'class="bg-danger"'}>
