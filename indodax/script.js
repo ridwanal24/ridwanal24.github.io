@@ -274,6 +274,7 @@ function fillTableConverter(){
                 
                 text += `<tr ${withdraw == 'Ya'? 'class="bg-success"':'class="bg-danger"'}>
                             <td><b>${item.nama}</b></td>
+                            <td><b>${item.coin}</b></td>
                             <td class="text-center">${item.wallet == null? 'Tidak Ada':item.wallet}</td>
                             <td class="text-center">${item.faucetpay == null? 'Tidak Ada':item.faucetpay}</td>
                             <td class="text-center">${withdraw}</td>
