@@ -109,7 +109,7 @@ $.ajax({
         Object.entries(globalData.kurs).forEach(([key]) => {
             globalData.label.push(key);
         });
-
+        console.log(data);
         loadAllSelect();
         validateSelect();
     },
