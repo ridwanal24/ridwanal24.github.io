@@ -1,11 +1,11 @@
-import { faCoffee } from '@fortawesome/free-solid-svg-icons';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+// import { faCoffee } from '@fortawesome/free-solid-svg-icons';
+// import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import React, { useState } from 'react'
 
 const pages = ['Home', 'About', 'Contact', 'Blog'];
-const medsosIcons = [
-    <svg className="w-4 h-4 md:hover:text-blue-700" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path d="M504 256C504 119 393 8 256 8S8 119 8 256c0 123.78 90.69 226.38 209.25 245V327.69h-63V256h63v-54.64c0-62.15 37-96.48 93.67-96.48 27.14 0 55.52 4.84 55.52 4.84v61h-31.28c-30.8 0-40.41 19.12-40.41 38.73V256h68.78l-11 71.69h-57.78V501C413.31 482.38 504 379.78 504 256z" /></svg>,
-]
+// const medsosIcons = [
+//     <svg className="w-4 h-4 md:hover:text-blue-700" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path d="M504 256C504 119 393 8 256 8S8 119 8 256c0 123.78 90.69 226.38 209.25 245V327.69h-63V256h63v-54.64c0-62.15 37-96.48 93.67-96.48 27.14 0 55.52 4.84 55.52 4.84v61h-31.28c-30.8 0-40.41 19.12-40.41 38.73V256h68.78l-11 71.69h-57.78V501C413.31 482.38 504 379.78 504 256z" /></svg>,
+// ]
 
 export default function NavBar() {
     const [showMenu, setShowMenu] = useState(false)
@@ -52,14 +52,14 @@ export default function NavBar() {
 
                 <div className={`w-full md:block md:w-auto`} >
                     <ul className="flex flex-col py-4 mt-4 md:flex-row md:space-x-8 md:mt-0 md:text-sm md:font-medium" >
-                        {
+                        {/* {
                             medsosIcons.map(icon => {
 
                                 return (<li>
                                     <a href="" className="block text-lg py-2 pr-4 pl-3 text-gray-700 text-base font-semibold border-gray-100 hover:bg-gray-50 md:hover:bg-transparent md:border-none transition-all md:hover:border-b-2  md:hover:text-blue-700 md:p-0">{icon}  </a>
                                 </li>)
                             })
-                        }
+                        } */}
 
                     </ul>
                 </div>
