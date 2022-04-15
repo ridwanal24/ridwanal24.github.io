@@ -28,7 +28,7 @@ export default function NavBar() {
                             pages.map(page => {
 
                                 return (<li>
-                                    <a href={`/${page.toLowerCase()}`} className="block py-2 pr-4 pl-3 text-gray-700 text-base font-semibold border-gray-100 hover:bg-gray-50 md:hover:bg-transparent md:border-none transition-all md:hover:border-b-2  md:hover:text-blue-700 md:p-0  ">{page}  </a>
+                                    <a href={`/${page.toLowerCase()}`} className="block py-2 pr-4 pl-3 text-gray-700 text-base  border-gray-100 hover:bg-gray-50 md:hover:scale-110 md:hover:bg-transparent md:border-none transition-all font-semibold duration-100  md:hover:text-blue-700 md:p-0  ">{page}  </a>
                                 </li>)
                             })
                         }
