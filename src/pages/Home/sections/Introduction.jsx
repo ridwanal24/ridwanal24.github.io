@@ -1,5 +1,5 @@
 import React from 'react'
-import bg from "../../assets/imgs/homepage_bg.png";
+import bg from "../../../assets/imgs/homepage_bg.png";
 
 const introJob = "Web Developer";
 
@@ -13,7 +13,7 @@ export default function introduction() {
                     {/* <span className="block text-7xl py-6 font-extrabold" >Web Developer</span> */}
                     <span className="block" >
                         {introJob.split('').map((item, index) => {
-                            if (index == 2) {
+                            if (index === 2) {
                                 return (
                                     <span className=" mr-4 cursor-default transition-all text-7xl font-extrabold inline-block duration-200 hover:text-blue-700 hover:scale-125">{item}</span>
                                 )
