@@ -67,7 +67,7 @@
             <p class="font-mono text-xs text-accent mb-6 reveal">// tentang saya</p>
             <h2 class="font-serif text-4xl md:text-5xl leading-tight mb-8 reveal reveal-delay-1">
               Memahami sesuatu bekerja adalah kepuasan tersendiri,<br />
-              <span class="italic text-paper/50">termasuk dengan error dan bug nya.</span>
+              <span class="italic text-paper/50">termasuk error dan bug nya.</span>
             </h2>
             <div class="space-y-4 text-paper/70 leading-relaxed font-sans font-light">
               <p v-for="(para, i) in about.bio" :key="i" class="reveal" :class="'reveal-delay-' + (i + 2)">
@@ -99,7 +99,7 @@
           <div>
             <p class="font-mono text-xs text-muted mb-3">// proyek</p>
             <h2 class="font-serif text-4xl md:text-5xl text-ink">
-              Yang pernah<br /><em>gue bikin</em>
+              Sesuatu yang pernah<br /><em>saya buat</em>
             </h2>
           </div>
           <span class="font-mono text-sm text-muted hidden md:block">
@@ -133,7 +133,8 @@
               Ada project<br />menarik?
             </h2>
             <p class="font-sans text-ink/55 leading-relaxed mb-8">
-              Gue terbuka buat kolaborasi, freelance, atau sekadar ngobrol soal tech. Jangan ragu kirim pesan.
+              Saya terbuka buat kolaborasi, freelance, atau sekadar ngobrol soal tech (sesuai dengan apa yang saya
+              ketahui). Jangan ragu kirim pesan.
             </p>
             <a :href="'mailto:' + config.email"
               class="inline-flex items-center gap-3 font-mono text-sm px-6 py-3.5 rounded bg-ink text-paper hover:bg-accent transition-colors duration-300">

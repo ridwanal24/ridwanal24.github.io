@@ -1,6 +1,6 @@
 # Portfolio — Vue 3 + Tailwind
 
-Portfolio personal untuk fullstack developer. Dibangun dengan Vue 3, Vue Router, dan Tailwind CSS.
+Portfolio personal untuk fullstack developer. Dibangun dengan Vue 3, Vue Router, dan Tailwind CSS. (Pake claude gratisan, ku minta bikinin template nya, jadi tinggal edit-edit aja)
 
 ## Tech Stack
 
@@ -69,10 +69,10 @@ src/
 
 ```js
 export const config = {
-  name:   'Nama Kamu',
-  handle: '@namahandle',
-  email:  'halo@email.com',
-}
+  name: "Nama Kamu",
+  handle: "@namahandle",
+  email: "halo@email.com",
+};
 ```
 
 ### Tambah / edit project
@@ -80,49 +80,43 @@ export const config = {
 ```js
 export const projects = [
   {
-    slug:        'nama-project',      // URL: /project/nama-project
-    title:       'Nama Project',
-    year:        '2024',
-    status:      'Live',              // 'Live' | 'In Progress' | 'Archived'
-    excerpt:     'Satu kalimat singkat.',
-    cover:       '/images/cover.jpg', // taruh file di /public/images/
-    coverColor:  '#d4e5f7',           // warna placeholder kalau cover kosong
-    stack:       ['Vue 3', 'Laravel'],
-    demo:        'https://...',       // atau null
-    github:      'https://...',       // atau null
+    slug: "nama-project", // URL: /project/nama-project
+    title: "Nama Project",
+    year: "2024",
+    status: "Live", // 'Live' | 'In Progress' | 'Archived'
+    excerpt: "Satu kalimat singkat.",
+    cover: "/images/cover.jpg", // taruh file di /public/images/
+    coverColor: "#d4e5f7", // warna placeholder kalau cover kosong
+    stack: ["Vue 3", "Laravel"],
+    demo: "https://...", // atau null
+    github: "https://...", // atau null
 
     // Konten halaman detail:
-    description: [
-      'Paragraf pertama.',
-      'Paragraf kedua.',
-    ],
-    sections: [
-      { heading: 'Judul Bagian', body: 'Isi panjang...' },
-    ],
-    highlights: [
-      'Fitur atau capaian penting',
-    ],
-    images: ['/images/ss1.jpg'],      // screenshot tambahan
+    description: ["Paragraf pertama.", "Paragraf kedua."],
+    sections: [{ heading: "Judul Bagian", body: "Isi panjang..." }],
+    highlights: ["Fitur atau capaian penting"],
+    images: ["/images/ss1.jpg"], // screenshot tambahan
   },
-]
+];
 ```
 
 ### Tambah gambar project
 
 Taruh file gambar di folder `public/images/`, lalu referensikan sebagai:
+
 ```js
-cover: '/images/nama-file.jpg'
+cover: "/images/nama-file.jpg";
 ```
 
 ---
 
 ## Routes
 
-| Path              | View              | Deskripsi                  |
-|-------------------|-------------------|----------------------------|
-| `/`               | HomeView          | Halaman utama               |
-| `/project/:slug`  | ProjectView       | Detail project              |
-| `/*`              | NotFoundView      | 404                         |
+| Path             | View         | Deskripsi      |
+| ---------------- | ------------ | -------------- |
+| `/`              | HomeView     | Halaman utama  |
+| `/project/:slug` | ProjectView  | Detail project |
+| `/*`             | NotFoundView | 404            |
 
 ---
 
@@ -133,11 +127,13 @@ cover: '/images/nama-file.jpg'
 Untuk SPA routing, buat file konfigurasi rewrite:
 
 **Netlify** — buat `public/_redirects`:
+
 ```
 /*  /index.html  200
 ```
 
 **Vercel** — buat `vercel.json`:
+
 ```json
 {
   "rewrites": [{ "source": "/(.*)", "destination": "/index.html" }]
