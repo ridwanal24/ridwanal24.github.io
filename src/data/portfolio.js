@@ -202,7 +202,7 @@ export const projects = [
   {
     slug: "cms-ire-yogyakarta",
     title: "CMS Website IRE Yogyakarta",
-    year: "2024",
+    year: "2022",
     status: "Archived",
     excerpt:
       "CMS custom untuk mengelola konten website IRE Yogyakarta, mulai dari artikel, publikasi, hingga galeri dengan struktur halaman yang fleksibel.",
