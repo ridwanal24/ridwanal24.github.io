@@ -94,7 +94,7 @@ export const projects = [
     status: "Live",
     excerpt:
       "Aplikasi internal Polresta Yogyakarta untuk mengelola dan mendistribusikan dokumen anggaran secara efisien dan terpusat.",
-    cover: "",
+    cover: "/images/sidistan.webp",
     coverColor: "#d4e5f7",
     stack: [
       "Laravel 11",
@@ -152,7 +152,7 @@ export const projects = [
     status: "Archived",
     excerpt:
       "Platform untuk mengelola data dan dokumen BUM Desa agar lebih terstruktur dan mudah diakses.",
-    cover: "",
+    cover: "/images/database-bumdes.webp",
     coverColor: "#e8f0fe",
     stack: ["Laravel", "React JS", "MySQL", "TailwindCSS"],
     demo: null,
@@ -206,7 +206,7 @@ export const projects = [
     status: "Archived",
     excerpt:
       "CMS custom untuk mengelola konten website IRE Yogyakarta, mulai dari artikel, publikasi, hingga galeri dengan struktur halaman yang fleksibel.",
-    cover: "",
+    cover: "/images/cms-ire.webp",
     coverColor: "#f5e6ff",
     stack: ["React JS", "Chakra UI", "CKEditor 5", "Laravel", "Redis"],
     demo: null,
@@ -250,6 +250,61 @@ export const projects = [
       "Integrasi CKEditor 5 custom build",
       "Tracking download publikasi (dengan input user)",
       "Belasan halaman aktif dengan banyak konten",
+    ],
+
+    images: [],
+  },
+
+  {
+    slug: "click-o-game",
+    title: "Click O: Game Kecepatan Tangan",
+    year: "2022",
+    status: "Live",
+    excerpt:
+      "Game mobile berbasis Flutter dengan konsep reflex & speed, di mana pemain harus menekan lingkaran dengan urutan angka secara cepat dan tepat.",
+    cover: "/images/click-o-game.webp",
+    coverColor: "#e6f7ff",
+    stack: ["Flutter", "Dart"],
+    demo: "https://play.google.com/store/apps/details?id=com.rhaka.clickogame&hl=id",
+    github: null,
+
+    description: [
+      "Click O Game adalah game mobile yang saya kembangkan menggunakan Flutter dan telah dipublikasikan di Google Play Store.",
+      "Game ini dibuat dalam bentuk kerja sama dengan pihak lain, dengan konsep gameplay sederhana namun menguji kecepatan dan ketelitian pemain dalam merespons angka yang muncul secara acak di layar.",
+      "Aplikasi ini telah diunduh lebih dari 5.000 kali dengan rating 3.5/5  di Play Store.",
+    ],
+
+    sections: [
+      {
+        heading: "Konsep Gameplay",
+        body:
+          "Gameplay dari Click O Game terinspirasi dari game seperti osu!, namun dengan mekanik yang lebih sederhana.\n\n" +
+          "Pemain akan melihat lingkaran dengan angka di dalamnya, dan harus menekan lingkaran dengan angka terkecil terlebih dahulu sesuai urutan. Setelah lingkaran tersebut ditekan, lingkaran akan hilang dan angka berikutnya akan muncul di posisi yang acak.\n\n" +
+          "Tantangan utama dari game ini adalah kecepatan berpikir dan ketepatan dalam memilih angka yang benar di antara beberapa pilihan yang muncul.",
+      },
+      {
+        heading: "Game Modes",
+        body:
+          "Click O Game memiliki dua mode permainan utama:\n\n" +
+          "1. Time Mode — Pemain harus menekan sebanyak mungkin lingkaran dengan urutan yang benar dalam batas waktu tertentu. Skor ditentukan dari jumlah lingkaran yang berhasil ditekan.\n\n" +
+          "2. Endless Mode — Game akan terus berjalan tanpa batas waktu selama pemain tidak melakukan kesalahan dalam memilih lingkaran. Sekali salah tekan, permainan langsung berakhir.\n\n" +
+          "Kedua mode ini memberikan pengalaman yang berbeda, baik untuk pemain yang suka tantangan cepat maupun yang ingin menguji konsistensi dalam jangka panjang.",
+      },
+      {
+        heading: "Pengalaman Pengembangan",
+        body:
+          "Project ini menjadi salah satu pengalaman awal saya dalam mengembangkan game menggunakan Flutter, sekaligus memahami bagaimana membangun game loop, randomization, serta handling input pengguna secara real-time.\n\n" +
+          "Saya juga mendapatkan insight dari feedback pengguna di Play Store yang membantu memahami bagaimana pemain berinteraksi dengan game serta area yang bisa ditingkatkan.",
+      },
+    ],
+
+    highlights: [
+      "Game mobile berbasis Flutter yang telah publish di Play Store",
+      "5.000+ downloads di Google Play Store",
+      "Rating 3.5/5 dari user",
+      "Gameplay sederhana namun menantang (reflex & accuracy)",
+      "Dua mode permainan: Time Mode & Endless Mode",
+      "Sistem random spawn untuk meningkatkan replayability",
     ],
 
     images: [],
